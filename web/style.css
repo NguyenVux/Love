@@ -1,0 +1,99 @@
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.scene {
+    width: 300px;
+    height: 300px;
+    perspective: 600px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  .cube__face
+  {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      vertical-align: middle;
+      overflow: hidden;
+  }
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  
+  .cube__face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 100%;
+  }
+.cube__face--front  { transform: rotateY(  0deg) translateZ(150px) }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(150px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(150px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(150px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(150px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(150px); }
+
+.cube
+{
+    transform: rotateX(-25deg);
+    /* animation: Spin 3s infinite;
+    animation-timing-function: linear; */
+}
+img{
+    width: 300px;
+    min-height: 300px;
+}
+
+
+
+@keyframes Spin
+{
+  0%
+  {
+    transform: rotateX(-25deg) rotateY(0deg);
+  }
+  100%
+  {
+    transform: rotateX(-25deg) rotateY(360deg); 
+  }
+}
+
+.top
+{
+  position: absolute;
+  top:-70%;
+  left:0%;
+}
+
+.right
+{
+  position: absolute;
+  top:-46%;
+  left:0%;
+}
+
+ul
+{
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  display:flex;
+  justify-content: space-evenly;
+}
+li{
+  list-style-type: none;
+}
+
+input
+{
+    width: 100px;
+    height: 60px;
+}
